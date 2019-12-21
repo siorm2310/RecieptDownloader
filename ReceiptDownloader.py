@@ -48,6 +48,27 @@ def ListMessagesMatchingQuery(service, user_id, query=''):
         print('An error occurred: {}'.format(error))
 
 
+def GetMessage(service, user_id, msg_id):
+    """Get a Message with given ID.
+
+    Args:
+      service: Authorized Gmail API service instance.
+      user_id: User's email address. The special value "me"
+      can be used to indicate the authenticated user.
+      msg_id: The ID of the Message required.
+
+    Returns:
+      A Message.
+    """
+    try:
+        message = service.users().messages().get(userId=user_id, id=msg_id).execute()
+        print('Message snippet: {}'.format(message['payload']))
+        return message
+
+    except:
+        print('An error occurred')
+
+
 def create_service():
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
@@ -77,6 +98,13 @@ def create_service():
 
 if __name__ == "__main__":
     service = create_service()
-    messages = ListMessagesMatchingQuery(service, 'siorm2310@gmail.com')
-    # TODO: something with the information
-    print(messages)
+    # messages = ListMessagesMatchingQuery(service, 'siorm2310@gmail.com', 'Steam')
+    # print(messages)
+    print('\n')
+    GetMessage(service, 'siorm2310@gmail.com', '16f25df02f23853b')
+
+    # response = service.users().messages().list(userId='siorm2310@gmail.com',
+    #                                            labelIds=[]).execute()
+    # while 'nextPageToken' in response:
+    #     page_token = response['nextPageToken']
+    #     response = service.users().messages().list(userId='siorm2310@gmail.com',labelIds=[],pageToken=page_token).execute()

@@ -1,0 +1,5 @@
+1. authenticate
+2. go through the inbox
+3. if sender is in SENDERS, move it to "Receipts" label
+
+
