@@ -96,19 +96,44 @@ def create_service():
 
 def main():
 
-    desired_senders = ['abc@123.com', 'jon@doe.co.il'] # Enter here sender emails for download
+    desired_senders = [
+        'Sony@email.sonyentertainmentnetwork.com‏'
+        ] # Enter here sender emails for download
+
+    destination_folder = ''
+
+    messages = []
+
     service = create_service()
+
+    for sender in desired_senders:
+        try:
+            message_list = ListMessagesMatchingQuery(service, 'me', str(sender))
+            # message_list = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
+            for i,item in enumerate(message_list):
+                messages.append(GetMessage(service, 'me', item['id']))
+                # TODO: get the message
+                # TODO: download the message
+                # TODO: print snippet
+            # messages = GetMessage(service, 'me', message_list[0]['id'])
+                print(messages[i]['snippet'])
+        except IndexError:
+            print(f'something went wrong. maybe no emails from {sender}?')
+
+        
 
 
 if __name__ == "__main__":
-    service = create_service()
-    messages = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
-    message = GetMessage(service, "me", messages[0]['id'])
-    msg_str = base64.urlsafe_b64decode(message['raw'].encode('ASCII'))
-    mime_msg = email.message_from_string(msg_str.decode())
 
-    file_name = 'abc.eml'
+    main()
+    # service = create_service()
+    # messages = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
+    # message = GetMessage(service, "me", messages[0]['id'])
+    # msg_str = base64.urlsafe_b64decode(message['raw'].encode('ASCII'))
+    # mime_msg = email.message_from_string(msg_str.decode())
 
-    with open(file_name, 'w') as outfile:
-        gen = email.generator.Generator(outfile)
-        gen.flatten(mime_msg)
+    # file_name = 'abc.eml'
+
+    # with open(file_name, 'w') as outfile:
+    #     gen = email.generator.Generator(outfile)
+    #     gen.flatten(mime_msg)
