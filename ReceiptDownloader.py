@@ -61,9 +61,8 @@ def GetMessage(service, user_id, msg_id):
       A Message.
     """
     try:
-        message = service.users().messages().get(userId=user_id, id=msg_id).execute()
-        # print('Message snippet: {}'.format(message['payload']['headers']))
-        # print('Message snippet: {}'.format(message['raw']))
+        # message = service.users().messages().get(userId=user_id, id=msg_id).execute()
+        message = service.users().messages().get(userId=user_id, id=msg_id, format='raw').execute()
         return message
 
     except:
@@ -96,11 +95,18 @@ def create_service():
     service = build('gmail', 'v1', credentials=creds)
     return service
 
+
 if __name__ == "__main__":
     service = create_service()
     messages = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
     message = GetMessage(service, "me", messages[0]['id'])
     # print(message)
-    decoded_message = base64.urlsafe_b64encode(message)
+    msg_str = base64.urlsafe_b64decode(message['raw'].encode('ASCII'))
     # print(decoded_message)
-    # print(GetMessage(service, 'siorm2310@gmail.com ',messages[0]['id']))
+    mime_msg = email.message_from_string(msg_str.decode())
+
+    file_name = 'abc.eml'
+
+    with open(file_name, 'w') as outfile:
+        gen = email.generator.Generator(outfile)
+        gen.flatten(mime_msg)

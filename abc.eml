@@ -1,0 +1,565 @@
+Delivered-To: siorm2310@gmail.com
+Received: by 2002:a05:6504:1287:0:0:0:0 with SMTP id p7csp5831023lto;
+        Tue, 4 Feb 2020 12:13:25 -0800 (PST)
+X-Google-Smtp-Source: 
+ APXvYqyz5Nz3jgCa2tYxXN94U4xM9af9OP1gpS/AZRFQwNXpvTvksDWlU7RQyKT/qhBvw0oZsieg
+X-Received: by 2002:a02:ca10:: with SMTP id i16mr26514073jak.10.1580847205426;
+        Tue, 04 Feb 2020 12:13:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1580847205; cv=none;
+        d=google.com; s=arc-20160816;
+        b=W0i3Pjn1e5FLagVRkMIjWomcUZmpvyfWmQszbvhdFFE3sL/myMw/eMutSymO1XdJY+
+         xq+4PYyXH6Sc/gw3ktghEJdutxv0bwoGP/UwH99FevzrE6RuVpnQnaPoX17sZa2YieV9
+         uGlQQYAYHcRm+MWdaW2oQrdYRX43eZ1ywaJ8dDjOVbjk6Z/l+Mwdrvg9rY5cLyW5L7ZU
+         YI3u2HdLo36Xd3sw6QgQHGVFNv0cOCUzoe+TGWCMNeiYjzbo4wxIsf2BVW7wVPm3V7zI
+         pv8dyx6CueUetT3krxBdIpkDV6CQBn+KAcr6xZoi3MTei9oc7uxVwAZfD5G0jhaBDdDQ
+         bxew==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;
+        h=content-transfer-encoding:feedback-id:message-id:list-id:reply-to
+         :mime-version:date:subject:to:from;
+        bh=DWblYX5dP73TKXyP+IhPQZSjFGueR190PPQxIJDxQ04=;
+        b=fVor4tJLHZP9iSF++m3vayz13xGJ82Hvo7rVg/MiV58otD9eWO4iwdJT6mT1IEu+d3
+         eteaC9DkarrJM5qw6RwXxaD9MIPQvizxMNlx8oGdh2UDEeFq0YFYE+TsooFJKXaMyf2A
+         69FDbi8R1h+3LJVCJSskST8mDLzgan1fduQ6ngcyzMEW7vkgjpGs/uXmxk4QCe/mcIgh
+         Zxo3ba20nTn9uFaWX0HiVV7NmTY/8UXj4JKjbb/5v0TrW0Attx3qrfHpfDM3HjuLpQmS
+         LEM7lU39bxPrph1xzz9jCZqG6AX+0vwmZRwADtegSXueOb9pnz2E43CoHknrL20kvNmi
+         mVuw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of
+ bounce-19_html-470881005-341647-6416383-418830@bounce.txn-email.playstation.com
+ designates 136.147.184.223 as permitted sender)
+ smtp.mailfrom=bounce-19_HTML-470881005-341647-6416383-418830@bounce.txn-email.playstation.com
+Return-Path: 
+ <bounce-19_HTML-470881005-341647-6416383-418830@bounce.txn-email.playstation.com>
+Received: from mta6.txn-email.playstation.com (mta6.txn-email.playstation.com.
+ [136.147.184.223])
+        by mx.google.com with ESMTPS id
+ v26si11175138ion.128.2020.02.04.12.13.24
+        for <siorm2310@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 04 Feb 2020 12:13:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of
+ bounce-19_html-470881005-341647-6416383-418830@bounce.txn-email.playstation.com
+ designates 136.147.184.223 as permitted sender) client-ip=136.147.184.223;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of
+ bounce-19_html-470881005-341647-6416383-418830@bounce.txn-email.playstation.com
+ designates 136.147.184.223 as permitted sender)
+ smtp.mailfrom=bounce-19_HTML-470881005-341647-6416383-418830@bounce.txn-email.playstation.com
+Received: by mta6.txn-email.playstation.com id h7786a2fmd47 for
+ <siorm2310@gmail.com>;
+ Tue, 4 Feb 2020 20:13:23 +0000 (envelope-from <bounce-19_HTML-470881005-341647-6416383-418830@bounce.txn-email.playstation.com>)
+From: "PlayStation" <Sony@email.sonyentertainmentnetwork.com>
+To: <siorm2310@gmail.com>
+Subject: Thank You For Your Purchase
+Date: Tue, 04 Feb 2020 14:13:23 -0600
+MIME-Version: 1.0
+Reply-To: "NP Transactional Emails"
+ <reply-fec617747462007a-19_HTML-470881005-6416383-418830@txn-email.playstation.com>
+List-ID: <6151033.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 6416383_341647
+Message-ID: <0b28e0c6-faf3-42bf-84a9-cf1c4b66d352@ind1s06mta940.xt.local>
+Feedback-ID: 6416383:341647:136.147.184.223:sfmktgcld
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+      /* CLIENT-SPECIFIC STYLES */
+      body {
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+      padding: 0;
+      } /* Prevent WebKit and Windows mobile changing default text sizes + Margin Reset */
+      .ReadMsgBody {
+      width: 100%;
+      }
+      .ExternalClass {
+      width: 100%;
+      } /* Force Hotmail to display emails at full width */
+      .ExternalClass * {
+      line-height: 100%
+      } /* Force Hotmail/Outlook to display normal line spacing */
+      #outlook a {
+      padding: 0;
+      } /* Force Outlook to provide a "view in browser" message */
+      table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      } /* Remove spacing between tables in Outlook 2007 and up */
+      img {
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+      } /* Allow smoother rendering of resized image in Internet Explorer */
+      /* RESET STYLES */
+      img {
+      border: 0;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      }
+      table {
+      border-collapse: collapse !important;
+      }
+      body {
+      height: 100% !important;
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      }
+      a:link {
+      color : #006db4;
+      }
+      a:visited {
+      color : #006db4;
+      }
+      a.whitelink:link {
+      color: #ffffff
+      }
+      a.whitelink:visited {
+      color: #ffffff
+      }
+      a.graylink:link {
+      color: #333333;
+      }
+      a.graylink:visited {
+      color: #333333;
+      }
+      @media only screen and (max-width:480px) {
+      *[class*=resizetofull] {
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 auto !important;
+      }/*Place this on main table hosting email - Makes it fluid*/
+      *[class*=colstack] {
+      display: block;
+      width: 100%;
+      padding: 0 !important
+      }
+      *[class*=mobile-hide] {
+      display: none !important;
+      } /*Hide images from mobile - but keeps it in desktop */
+      *[class*=mobile-show] {
+      display: block !important;
+      overflow : visible !important;
+      height: auto !important;
+      max-height: inherit !important;
+      } /*Hides elements in desktop but displays them in Mobile */
+      *[class*=mobile-show-table] {
+      display: table !important;
+      overflow : visible !important;
+      height: auto !important;
+      max-height: inherit !important;
+      } /* Assign to a table that is hidden in mobile, but shows in mobile */
+      *[class*=mobile-show-tr] {
+      display: table-row !important;
+      overflow : visible !important;
+      height: auto !important;
+      max-height: inherit !important;
+      } /* Assign to a tr that is hidden in mobile, but shows in mobile */
+      *[class*=mobile-show-td] {
+      display: table-cell !important;
+      overflow : visible !important;
+      height: auto !important;
+      max-height: inherit !important;
+      } /* Assign to a td that is hidden in mobile, but shows in mobile */
+      *[class*=removepadding] {
+      padding: 0 !important;
+      } /* removes padding from Desktop view */
+      *[class*=mobilepadding] {
+      padding: 10px !important;
+      } /* Mobile padding */
+      *[class*=padTop10] {
+      padding-top: 10px !important;
+      } /* Mobile padding top*/
+      *[class*=padLeft10] {
+      padding-left: 10px !important;
+      } /* Mobile padding left*/
+      *[class*=padRight10] {
+      padding-Right: 10px !important;
+      } /* Mobile padding right*/
+      *[class*=padBottom10] {
+      padding-Bottom: 10px !important;
+      } /* Mobile padding left*/
+      *[class*=fourteen] {
+      font-size: 14px !important;
+      } /* Mobile font size */
+      *[class~=mobile-block] {
+      width: 100% !important;
+      } /* unhide image element from desktop*/
+      .leftcol {
+      display: table-footer-group;
+      }
+      .rightcol {
+      display: table-header-group;
+      }
+      *[class~=align-left] {
+      text-align: left !important;
+      }
+      *[class~=align-center] {
+      text-align: center !important;
+      margin: 0 auto !important
+      }
+      *[class~=align-right] {
+      text-align: right !important;
+      }
+      *[class~=minWFix] {
+      min-width: inherit !important;
+      }
+      }
+    </style>
+  </head>
+  <body bgcolor="#FFFFFF" style="background-color:#ffffff; margin:0; padding:0;-webkit-font-smoothing: antialiased;width:100% !important;-webkit-text-size-adjust:none; font-family:Arial, Helvetica, sans-serif;" topmargin="0">
+    
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" >
+      <tr>
+        <td bgcolor="#ffffff" >
+          <div align="center">
+            <!-- Start HERE -->
+            <table width="600" border="0" cellspacing="0" cellpadding="0" class="resizetofull minWFix" style="min-width:600px;">
+              <tbody>
+                <!-- Logo -->
+                <tr>
+                  <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td valign="top" align="center" style="padding:40px 20px 0px 20px;"><img src="http://image.playstationemail.com/lib/fe9012747462077576/m/1/PSN_Logo.jpg" width="438" height="106" alt="PlayStation" style="display: block;" border="0" class="resizetofull"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- End Logo --> 
+                <!-- Content -->
+                <tr>
+                  <td valign="top" align="left">
+                    <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<!-- Declare a dataobject named JsonVar and set it equal to the @Json field --> 
+ 
+<!-- Foreach loop for the JsonVar --> 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+<!-- End Loop --> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <!-- Headline -->
+  
+  
+  <!-- End Headline --> 
+  <!-- Body 1 -->
+  <tr>
+    <td valign="top" align="left" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#505050; padding:40px 20px 40px 20px;"> 
+      Thank you for your purchase from PlayStation™Store.<br>
+      <br>
+      You will find a copy of your purchase details below and a link to the terms which apply to your purchase. Please print these off and keep in a safe place for future reference. 
+       
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="left">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="1" bgcolor="#ffffff" style="border:none; border-bottom: 1px solid #d2d2d2; font-size:1px; line-height:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- End Body 1 -->
+  <tr>
+    <td valign="top" align="left" style="padding-top:20px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" valign="middle" width="50%" class="colstack align-center" style="font-family:Helvetica, sans-serif; font-size:21px; line-height:150%; color:#505050; padding:0px 0px 0px 20px;">
+                  Order Number: 179607859693
+                </td>
+                <td align="right" valign="middle" bgcolor="#cccccc" width="50%" class="colstack align-center" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#505050; padding:20px 20px 20px 0px;">
+                  Name: Sior Meir<br>
+                  Online ID: Sior2310<br>
+                  
+                  Date and time of purchase: 04/02/2020 10:13 PM Israel Time
+                  
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- Start Products Section -->
+  <tr>
+    <td valign="top" align="left" style="padding:40px 10px 0px 10px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="70%" bgcolor="#000000" style="font-family:Helvetica, sans-serif; font-size:13px;color:#ffffff; padding-left:10px; padding-top:20px; padding-bottom:20px;" valign="middle" align="left">
+            Details
+          </td>
+          <td bgcolor="#ffffff" width="10" valign="top" align="left">&nbsp;</td>
+          <td width="25%" bgcolor="#000000" style="font-family:Helvetica, sans-serif; font-size:13px;color:#ffffff; padding-right:10px;" valign="middle" align="right">
+            Unit of Price
+            
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  
+  <!-- Declare a dataobject named JsonVar and set it equal to the @Json field --> 
+   
+  <!-- Foreach loop for the JsonVar --> 
+  
+   
+  
+  
+  <tr>
+    <td valign="top" align="left" style="padding:0px 10px 0px 10px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="70%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-left:10px; padding-top:20px; padding-bottom:20px; border-bottom:1px solid #d2d2d2; line-height:18px;" valign="bottom" align="left">
+             
+              
+            BioShock: The Collection (Full Game)  
+              
+            
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-left:48px; line-height:18px;" align="left">
+                  
+                  
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td bgcolor="#ffffff" width="10" valign="top" align="left">&nbsp;</td>
+          <td width="25%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050;border-bottom:1px solid #d2d2d2; padding-top:20px; padding-right:10px;  padding-bottom:20px;" valign="top" align="right">
+            
+            
+            ILS 0.00
+            
+            
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+   
+  
+  
+  <tr>
+    <td valign="top" align="left" style="padding:0px 10px 0px 10px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="70%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-left:10px; padding-top:20px; padding-bottom:20px; border-bottom:1px solid #d2d2d2; line-height:18px;" valign="bottom" align="left">
+             
+              
+            The Sims™ 4 (Full Game)  
+              
+            
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-left:48px; line-height:18px;" align="left">
+                  
+                  
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td bgcolor="#ffffff" width="10" valign="top" align="left">&nbsp;</td>
+          <td width="25%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050;border-bottom:1px solid #d2d2d2; padding-top:20px; padding-right:10px;  padding-bottom:20px;" valign="top" align="right">
+            
+            
+            ILS 0.00
+            
+            
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+   
+  
+  
+  <tr>
+    <td valign="top" align="left" style="padding:0px 10px 0px 10px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="70%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-left:10px; padding-top:20px; padding-bottom:20px; border-bottom:1px solid #d2d2d2; line-height:18px;" valign="bottom" align="left">
+             
+              
+            Firewall Zero Hour™ (Full Game)  
+              
+            
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-left:48px; line-height:18px;" align="left">
+                  
+                  
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td bgcolor="#ffffff" width="10" valign="top" align="left">&nbsp;</td>
+          <td width="25%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050;border-bottom:1px solid #d2d2d2; padding-top:20px; padding-right:10px;  padding-bottom:20px;" valign="top" align="right">
+            
+            
+            ILS 0.00
+            
+            
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+   
+   
+  <!-- End Loop --> 
+  <!-- Total Section -->
+  <tr>
+    <td valign="top" align="left" style="padding:0px 10px 0px 10px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="70%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-left:10px; padding-bottom:0px; line-height:150%;" align="left" valign="top">
+            <br><br><br>
+            <span style="font-size:21px;">Current Wallet Amount*: ILS 0.00</span>
+          </td>
+          <td width="30%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-right:10px; line-height:150%;" align="right" valign="top">
+            
+            <br><br><br>
+            <span style="font-size:21px;">
+              
+                Total: ILS 0.00
+              
+            </span>
+            
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="font-family:Helvetica, sans-serif; font-size:11px;color:#505050; padding-left:10px; padding-top:10px; padding-bottom:0px; line-height:150%;" valign="bottom" align="left">
+            *This wallet amount is current as of the date and time of this transaction.
+          </td>
+        </tr>
+         
+        <tr>
+          <td width="70%" style="font-family:Helvetica, sans-serif; font-size:11px;color:#505050; padding-left:10px; padding-top:0px; padding-bottom:0px; line-height:150%;" valign="bottom" align="left">
+            
+              This is not a VAT/GST invoice.
+            
+          </td>
+          <td width="30%" style="font-family:Helvetica, sans-serif; font-size:13px;color:#505050; padding-right:10px; line-height:150%;" valign="bottom" align="right">&nbsp;</td>
+        </tr>
+        
+        
+        
+      </table>
+    </td>
+  </tr>
+  
+  <!-- Line -->
+  <tr>
+    <td valign="top" align="left" style="padding:40px 0px 0px 0px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="1" bgcolor="#ffffff" style="border:none; border-bottom: 1px solid #d2d2d2; font-size:1px; line-height:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- Body 2 -->
+   
+  <tr>
+    <td valign="top" align="left" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#505050; padding:40px 20px 40px 20px;"> 
+      At the time of making your purchase, you asked us to provide you with immediate access to your purchase with the understanding that this means you will have a 14 day “cooling off period” from the purchase date in which you can cancel your purchase and request a refund, but:
+      <br><br>
+      (i) for digital content (such as games), if you start downloading or streaming the content you will lose this cancellation right. Please note downloading may happen automatically (e.g. for in-game purchases or if you have enabled the [Auto Download] function in your account settings);
+      <br><br>
+      (ii) for a subscription service (like a PlayStation®Plus subscription) you will not get a full refund as we will make a deduction for the use you have had of the service.
+      <br><br>
+      You may have received this email to confirm that we have successfully taken a recurring payment from you in respect of an ongoing subscriptions service.
+      <br><br>
+      Please note the cancellation right in respect of a subscription service arises on the initial purchase of the service only. Where the subscription service is subject to periodic billing, no such cancellation right arises on subsequent payments. This is because you purchase a subscription for an indefinite period with periodic billing of the subscription fees. Each time you pay the subscription fees you are agreeing to continue your existing subscription into the next billing period.
+      <br><br>
+      For a cancellation form and further details about our cancellation policy, including cancelling purchases of game add-ons, season passes, in-game consumables, pre-orders and promotional bundles please see the PlayStation™Store Cancellation Policy at <a href="http://click.txn-email.playstation.com/?qs=d5a9bce7f0dd5774ff1141a869f16bcf2d1778b5acdf342999cffd865796e74229a1608f0e05f158bb29971caa328ed48e20c2dac6effe8f488e09f66100ee50">http://www.playstation.com/store-cancellation-policy</a>.
+      <br><br>
+      The above cancellation rights do not apply to purchases made outside of the PlayStation™Store, such as voucher codes for PlayStation®Plus and specific games.
+    </td>
+  </tr>
+  
+  
+  <!-- End Body 2 -->
+</table></td></tr></table>
+                  </td>
+                </tr>
+                <!-- End Content --> 
+                <!-- Footer -->
+                <tr>
+                  <td valign="top" align="left">
+                    
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <td valign="top" align="left" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#505050; padding:20px 20px 40px 20px;">
+          
+<a href="http://click.txn-email.playstation.com/?qs=d5a9bce7f0dd57747bd32d47695d59b5d11ed3bd18f39b06103be0d1e4b7210e1eceefde68af21edc7c2d00ff329c4426d2f9becfc780176d2df714814b9a768" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#006db4;">https://id.sonyentertainmentnetwork.com/id/management/#/p/communication?entry=security</a><br /><br />If you would like to view further information on our terms, policies and frequently asked questions, you can visit the following locations: <br>
+          <br>
+          Terms of Service and User Agreement:<br>
+          <a href="http://click.txn-email.playstation.com/?qs=d5a9bce7f0dd577412e94f37faa62c488c7e84502fa5763f021339cee82b9bb7e6f480653f0b1f87ceea1c842faa661dc2aea8ea56ae1162916d04b2666ef168" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#006db4;">https://www.playstation.com/legal/PSNTerms/</a><br>
+          <br>
+          Frequently Asked Questions and customer support:<br>
+          <a href="http://click.txn-email.playstation.com/?qs=d5a9bce7f0dd5774267dae02dee1f542968eae1e956112df7a4e4325d536d1959521fa79ea636baaf5a3868ce11eb9804e055b3b524c4262b17ebbd94ddb3a45" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#006db4;">https://www.playstation.com/get-help/contact-us/</a><br>
+          <br>
+          Privacy Policy:<br>
+          <a href="http://click.txn-email.playstation.com/?qs=d5a9bce7f0dd577412e94f37faa62c488c7e84502fa5763f021339cee82b9bb7e6f480653f0b1f87ceea1c842faa661dc2aea8ea56ae1162916d04b2666ef168" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#006db4;">https://www.playstation.com/legal/PSNTerms/</a><br>
+          <br>
+          This email has been sent on behalf of Sony Interactive Entertainment Network Europe Limited, a company registered in the United Kingdom with registration number 06020283, with its registered address at 10 Great Marlborough Street, London, W1F 7LP. The email has been delivered from a send-only address. Please do not reply to this message. If you have any queries, please contact Customer Support using the contact details found at:<br>
+          <a href="http://click.txn-email.playstation.com/?qs=d5a9bce7f0dd57742c32a5aafcc7893d4017f71cc756e95fb43994dd4a0ea9b2cb85411546450b5d3873cf9e0bc129f6d9b3b12a5880de25c1d5725fe0861bac" style="font-family:Helvetica, sans-serif; font-size:13px; line-height:150%; color:#006db4;">http://eu.playstation.com/support/</a><br>
+          <br>
+          <img src="http://image.txn-email.playstation.com/lib/fe9012747462077576/m/1/PSFM_Small_NoReg.png" alt="Playstation" height="15" width="20" style="display:inline-block;"> and "PlayStation" are registered trademarks or trademarks of Sony Interactive Entertainment Inc. &copy; 2020 Sony Interactive Entertainment LLC.<br>
+          <br>
+        </td>
+      </tr>
+    </tbody>
+  </table>   
+
+                  </td>
+                </tr>
+                <!-- End Footer -->
+              </tbody>
+            </table>
+            <!-- END Start HERE --> 
+          </div>
+        </td>
+      </tr>
+    </table>
+    <img src="http://click.txn-email.playstation.com/open.aspx?ffcb10-fec617747462007a-fe181078756d0d7b7d1176-fe9012747462077576-ff951579-fe2e1077756c0c7c751475-fec710717d6c077d&d=60114" width="1" height="1">
+  </body>
+</html>
