@@ -100,7 +100,7 @@ def main():
         'Sony@email.sonyentertainmentnetwork.com‏'
         ] # Enter here sender emails for download
 
-    destination_folder = ''
+    destination_folder = 'D:\mailfolder'
 
     messages = []
 
@@ -111,12 +111,12 @@ def main():
             message_list = ListMessagesMatchingQuery(service, 'me', str(sender))
             # message_list = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
             for i,item in enumerate(message_list):
-                messages.append(GetMessage(service, 'me', item['id']))
-                # TODO: get the message
-                # TODO: download the message
-                # TODO: print snippet
-            # messages = GetMessage(service, 'me', message_list[0]['id'])
-                print(messages[i]['snippet'])
+                raw_message = (GetMessage(service, 'me', item['id']))
+                string_message = msg_str = base64.urlsafe_b64decode(raw_message['raw'].encode('ASCII'))
+                MIME_message = email.message_from_string(msg_str.decode())
+
+                # file_name = 
+                print(raw_message[i]['internalDate'])
         except IndexError:
             print(f'something went wrong. maybe no emails from {sender}?')
 
