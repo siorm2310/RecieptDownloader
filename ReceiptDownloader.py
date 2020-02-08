@@ -62,7 +62,8 @@ def GetMessage(service, user_id, msg_id):
     """
     try:
         message = service.users().messages().get(userId=user_id, id=msg_id).execute()
-        print('Message snippet: {}'.format(message['payload']['headers']))
+        # print('Message snippet: {}'.format(message['payload']['headers']))
+        # print('Message snippet: {}'.format(message['raw']))
         return message
 
     except:
@@ -95,33 +96,11 @@ def create_service():
     service = build('gmail', 'v1', credentials=creds)
     return service
 
-def find_relevant_messages(service, user_id, msg_id, sender_list):
-    flag = 0
-    found_messages = []
-    while flag == 0:
-        response = service.users().messages().list(userId='siorm2310@gmail.com', labelIds=[]).execute()
-        IDs = response['id']
-
-        for ID in IDs:
-            message = GetMessage(service, user_id, ID)
-            if message['payload']['headers'][1] in sender_list:
-                print('got a message')
-                found_messages.append(message)
-
-    while 'nextPageToken' in response:
-        page_token = response['nextPageToken']
-        response = service.users().messages().list(userId='siorm2310@gmail.com',labelIds=[],pageToken=page_token).execute()
-
-
 if __name__ == "__main__":
     service = create_service()
-    messages = ListMessagesMatchingQuery(service, 'siorm2310@gmail.com', '')
-    print(messages[0])
-    print('\n')
-    m = GetMessage(service,'siorm2310@gmail.com',messages[0]['id'])
-
-    # response = service.users().messages().list(userId='siorm2310@gmail.com',
-    #                                            labelIds=[]).execute()
-    # while 'nextPageToken' in response:
-    #     page_token = response['nextPageToken']
-    #     response = service.users().messages().list(userId='siorm2310@gmail.com',labelIds=[],pageToken=page_token).execute()
+    messages = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
+    message = GetMessage(service, "me", messages[0]['id'])
+    # print(message)
+    decoded_message = base64.urlsafe_b64encode(message)
+    # print(decoded_message)
+    # print(GetMessage(service, 'siorm2310@gmail.com ',messages[0]['id']))
