@@ -8,7 +8,6 @@ import email
 import base64
 from apiclient import errors
 
-desired_senders = ['abc@123.com', 'jon@doe.co.il']
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 """Get a list of Messages from the user's mailbox.
@@ -95,14 +94,17 @@ def create_service():
     service = build('gmail', 'v1', credentials=creds)
     return service
 
+def main():
+
+    desired_senders = ['abc@123.com', 'jon@doe.co.il'] # Enter here sender emails for download
+    service = create_service()
+
 
 if __name__ == "__main__":
     service = create_service()
     messages = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
     message = GetMessage(service, "me", messages[0]['id'])
-    # print(message)
     msg_str = base64.urlsafe_b64decode(message['raw'].encode('ASCII'))
-    # print(decoded_message)
     mime_msg = email.message_from_string(msg_str.decode())
 
     file_name = 'abc.eml'
