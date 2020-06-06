@@ -4,3 +4,4 @@ apiexercise.py
 /venv
 /.vscode
 /.idea
+*.eml

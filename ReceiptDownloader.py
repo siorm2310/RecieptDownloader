@@ -8,13 +8,13 @@ import email
 import base64
 from apiclient import errors
 
-SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
+SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
 """Get a list of Messages from the user's mailbox.
 """
 
 
-def ListMessagesMatchingQuery(service, user_id, query=''):
+def ListMessagesMatchingQuery(service, user_id, query=""):
     """List all Messages of the user's mailbox matching the query.
 
     Args:
@@ -30,21 +30,24 @@ def ListMessagesMatchingQuery(service, user_id, query=''):
       appropriate ID to get the details of a Message.
     """
     try:
-        response = service.users().messages().list(userId=user_id,
-                                                   q=query).execute()
+        response = service.users().messages().list(userId=user_id, q=query).execute()
         messages = []
-        if 'messages' in response:
-            messages.extend(response['messages'])
+        if "messages" in response:
+            messages.extend(response["messages"])
 
-        while 'nextPageToken' in response:
-            page_token = response['nextPageToken']
-            response = service.users().messages().list(userId=user_id, q=query,
-                                                       pageToken=page_token).execute()
-            messages.extend(response['messages'])
+        while "nextPageToken" in response:
+            page_token = response["nextPageToken"]
+            response = (
+                service.users()
+                .messages()
+                .list(userId=user_id, q=query, pageToken=page_token)
+                .execute()
+            )
+            messages.extend(response["messages"])
 
         return messages
     except errors.HttpError as error:
-        print('An error occurred: {}'.format(error))
+        print("An error occurred: {}".format(error))
 
 
 def GetMessage(service, user_id, msg_id):
@@ -61,11 +64,16 @@ def GetMessage(service, user_id, msg_id):
     """
     try:
         # message = service.users().messages().get(userId=user_id, id=msg_id).execute()
-        message = service.users().messages().get(userId=user_id, id=msg_id, format='raw').execute()
+        message = (
+            service.users()
+            .messages()
+            .get(userId=user_id, id=msg_id, format="raw")
+            .execute()
+        )
         return message
 
     except:
-        print('An error occurred')
+        print("An error occurred")
 
 
 def create_service():
@@ -76,31 +84,31 @@ def create_service():
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token:
+    if os.path.exists("token.pickle"):
+        with open("token.pickle", "rb") as token:
             creds = pickle.load(token)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('token.pickle', 'wb') as token:
+        with open("token.pickle", "wb") as token:
             pickle.dump(creds, token)
 
-    service = build('gmail', 'v1', credentials=creds)
+    service = build("gmail", "v1", credentials=creds)
     return service
+
 
 def main():
 
     desired_senders = [
-        'Sony@email.sonyentertainmentnetwork.com‏'
-        ] # Enter here sender emails for download
+        "Sony@email.sonyentertainmentnetwork.com‏"
+    ]  # Enter here sender emails for download
 
-    destination_folder = 'D:\mailfolder'
+    destination_path = r"C:\RecieptsDownloaded"
 
     messages = []
 
@@ -108,23 +116,22 @@ def main():
 
     for sender in desired_senders:
         try:
-            message_list = ListMessagesMatchingQuery(service, 'me', str(sender))
+            message_list = ListMessagesMatchingQuery(service, "me", sender)
             # message_list = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
-            for i,item in enumerate(message_list):
-                raw_message = (GetMessage(service, 'me', item['id']))
-                string_message = msg_str = base64.urlsafe_b64decode(raw_message['raw'].encode('ASCII'))
+            for i, item in enumerate(message_list):
+                raw_message = GetMessage(service, "me", item["id"])
+                string_message = msg_str = base64.urlsafe_b64decode(
+                    raw_message["raw"].encode("ASCII")
+                )
                 MIME_message = email.message_from_string(msg_str.decode())
 
-                # file_name = 
-                print(raw_message[i]['internalDate'])
+                # file_name =
+                print(raw_message[i]["internalDate"])
         except IndexError:
-            print(f'something went wrong. maybe no emails from {sender}?')
-
-        
+            print(f"something went wrong. maybe no emails from {sender}?")
 
 
 if __name__ == "__main__":
-
     main()
     # service = create_service()
     # messages = ListMessagesMatchingQuery(service, 'me', 'Sony@email.sonyentertainmentnetwork.com‏')
