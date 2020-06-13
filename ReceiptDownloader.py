@@ -1,6 +1,7 @@
 from __future__ import print_function
 import pickle
 import os.path
+import os
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -105,18 +106,34 @@ def create_service():
 def get_messages_by_sender(sender_mail, sender_name, files_path):
     service = create_service()
     messages = ListMessagesMatchingQuery(service, "me", sender_mail)
-
+    create_senders_dir(sender_name, files_path)
     for index, _ in enumerate(messages):
         msg = GetMessage(service, "me", messages[index]["id"])
         msg_str = base64.urlsafe_b64decode(msg["raw"].encode("ASCII"))
         mime_msg = email.message_from_string(msg_str.decode())
-
-        with open(files_path + f"\{sender_name}\{sender_name}_{index}.eml", "w+") as f:
+        date_stamp = email.utils.parsedate(mime_msg._headers[1][1].split(";")[1])[0:3]
+        with open(
+            files_path
+            + f"\\{sender_name}\\{sender_name}_{index}_{date_stamp[2]}-{date_stamp[1]}-{date_stamp[0]}.eml",
+            "w+",
+        ) as f:
             gen = email.generator.Generator(f)
             gen.flatten(mime_msg)
 
 
+def create_senders_dir(sender_name, files_path):
+    try:
+        os.mkdir(files_path + f"\\{sender_name}")
+    except FileExistsError as error:
+        print(f"{sender_name} folder exists in this path")
+    finally:
+        return
+
+
 if __name__ == "__main__":
+    # TODO: list of desired senders
+    # TODO: create directory with sender's name if doesn't exists
+    # TODO: add time stamp to each mail
     get_messages_by_sender(
         "Sony@email.sonyentertainmentnetwork.com‏",
         "Sony",
