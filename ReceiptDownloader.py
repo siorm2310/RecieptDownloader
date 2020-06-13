@@ -1,4 +1,3 @@
-from __future__ import print_function
 import pickle
 import os.path
 import os
@@ -108,6 +107,7 @@ def get_messages_by_sender(sender_mail, sender_name, files_path):
     messages = ListMessagesMatchingQuery(service, "me", sender_mail)
     create_senders_dir(sender_name, files_path)
     for index, _ in enumerate(messages):
+        print(f"Proccessing message #{index}")
         msg = GetMessage(service, "me", messages[index]["id"])
         msg_str = base64.urlsafe_b64decode(msg["raw"].encode("ASCII"))
         mime_msg = email.message_from_string(msg_str.decode())
@@ -119,23 +119,28 @@ def get_messages_by_sender(sender_mail, sender_name, files_path):
         ) as f:
             gen = email.generator.Generator(f)
             gen.flatten(mime_msg)
+            print(f"Process of message #{index} completed")
 
 
 def create_senders_dir(sender_name, files_path):
     try:
         os.mkdir(files_path + f"\\{sender_name}")
-    except FileExistsError as error:
+    except FileExistsError:
         print(f"{sender_name} folder exists in this path")
     finally:
         return
 
 
 if __name__ == "__main__":
-    # TODO: list of desired senders
-    # TODO: create directory with sender's name if doesn't exists
-    # TODO: add time stamp to each mail
-    get_messages_by_sender(
-        "Sony@email.sonyentertainmentnetwork.com‏",
-        "Sony",
-        "C:\\code_projects\\RecieptDownloader",
-    )
+    SENDERS = {
+        "Sony": "Sony@email.sonyentertainmentnetwork.com‏",
+        "EpicGames": "help@epicgames.com",
+        "RamiLevy": "no-replay@rami-levy.co.il",
+        "RamiLevy": "online@rami-levy.co.il",
+        "HOT": "service@hot-info.net.il‏",
+    }
+
+    EMAILS_PATH = "C:\\code_projects\\RecieptDownloader"
+
+    for sender_name, sender_email in SENDERS.items():
+        get_messages_by_sender(sender_email, sender_name, EMAILS_PATH)
